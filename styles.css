@@ -104,6 +104,14 @@ video {
   margin-right: 11rem;
 }
 
+@media (max-width: 768px) {
+    .links {
+        margin-left: 2rem;
+        gap: 2rem;
+        font-size: 0.7em;
+    }
+}
+
 li {
   transition: transform 0.3s, color 0.3s;
 }
