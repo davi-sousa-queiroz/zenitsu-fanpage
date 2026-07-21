@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZENITSU</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav class="navbar">
@@ -33,6 +39,87 @@
         preload="auto"
         src="static/zenitsu.mp4"
       ></video>
+    </section>
+    <section class="gallery">
+      <h2 class="heading reveal-on-scroll">
+        <span class="g">g</span><span class="a">a</span><span class="l">ll</span
+        ><span class="e">e</span><span class="r">r</span
+        ><span class="y">y</span>
+      </h2>
+      <div class="carousel" mask>
+        <article>
+          <img src="static/4c3f3dd423ae0f94e7ca21d5086895c9.jpg" />
+        </article>
+
+        <article>
+          <img src="static/images (1).jpeg" alt="easter eggs" />
+        </article>
+
+        <article>
+          <img
+            src="static/6cf59c38b14f1fbe68b4b0f666e88c60.jpg"
+            alt="hot cross buns"
+          />
+        </article>
+
+        <article>
+          <img src="static/images (2).jpeg" alt="easter chick" />
+        </article>
+
+        <article>
+          <img src="static/images (3).jpeg" alt="easter bunny" />
+        </article>
+
+        <article>
+          <img src="static/wp9174871.jpg" alt="crown of thorms" />
+        </article>
+      </div>
+      <script>
+        (function () {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("in-view");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.25 },
+          );
+          document
+            .querySelectorAll(".reveal-on-scroll")
+            .forEach((el) => io.observe(el));
+        })();
+      </script>
+      <div class="carousel" mask reverse>
+        <article>
+          <img src="static/wp9174871.jpg" alt="crown of thorms" />
+        </article>
+
+        <article>
+          <img src="static/images (3).jpeg" alt="easter bunny" />
+        </article>
+
+        <article>
+          <img src="static/images (2).jpeg" alt="easter chick" />
+        </article>
+
+        <article>
+          <img
+            src="static/6cf59c38b14f1fbe68b4b0f666e88c60.jpg"
+            alt="hot cross buns"
+          />
+        </article>
+
+        <article>
+          <img src="static/images (1).jpeg" alt="easter eggs" />
+        </article>
+
+        <article>
+          <img src="static/4c3f3dd423ae0f94e7ca21d5086895c9.jpg" />
+        </article>
+      </div>
     </section>
   </body>
 </html>
