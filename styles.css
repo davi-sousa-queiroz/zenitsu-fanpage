@@ -372,3 +372,9 @@ li:hover {
 		gap: 2rem;
 	}
 }
+
+.footer {
+  height: 20rem;
+  width: 100%;
+  background: linear-gradient(orange, rgb(254, 191, 1), rgb(255, 179, 0))
+}
