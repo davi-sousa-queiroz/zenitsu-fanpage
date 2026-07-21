@@ -475,3 +475,7 @@ li:hover {
     justify-content: center;
   }
 }
+
+span .flags {
+	font-size: 1.5em;
+}
