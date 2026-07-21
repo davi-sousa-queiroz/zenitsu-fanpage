@@ -12,9 +12,9 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body id="top">
     <nav class="navbar">
-      <button class="Btn">
+      <a class="Btn" href="#top" aria-label="Home">
         <span class="svgContainer">
           <svg fill="white" viewBox="0 0 496 512" height="1.6em">
             <path
@@ -23,11 +23,25 @@
           </svg>
         </span>
         <span class="BG"></span>
-      </button>
+      </a>
       <ul class="links">
-        <li>gallery</li>
-        <li>instagram</li>
-        <li>github</li>
+        <li><a href="#gallery">gallery</a></li>
+        <li>
+          <a
+            href="https://instagram.com/davz0_0"
+            target="_blank"
+            rel="noreferrer"
+            >instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/davi-sousa-queiroz"
+            target="_blank"
+            rel="noreferrer"
+            >github</a
+          >
+        </li>
       </ul>
     </nav>
     <section class="hero">
@@ -40,7 +54,7 @@
         src="static/zenitsu.mp4"
       ></video>
     </section>
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h2 class="heading reveal-on-scroll">
         <span class="g">g</span><span class="a">a</span><span class="l">ll</span
         ><span class="e">e</span><span class="r">r</span
@@ -74,24 +88,6 @@
           <img src="static/wp9174871.jpg" alt="crown of thorms" />
         </article>
       </div>
-      <script>
-        (function () {
-          const io = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("in-view");
-                  io.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.25 },
-          );
-          document
-            .querySelectorAll(".reveal-on-scroll")
-            .forEach((el) => io.observe(el));
-        })();
-      </script>
       <div class="carousel" mask reverse>
         <article>
           <img src="static/wp9174871.jpg" alt="crown of thorms" />
@@ -121,5 +117,6 @@
         </article>
       </div>
     </section>
+    <script src="script.js"></script>
   </body>
 </html>

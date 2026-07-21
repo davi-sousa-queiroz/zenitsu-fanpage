@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: black;
     font-family: "Inter", sans-serif;
@@ -25,7 +29,7 @@ body {
     animation: fade-down 4s;
     height: auto;
     width: 100%;
-    padding: 3rem 4rem;
+    padding: 1.75rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +37,9 @@ body {
     top: 0;
     left: 0;
     z-index: 50;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .hero {
@@ -48,16 +55,16 @@ video {
 .Btn {
   width: 45px;
   height: 45px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
   background-color: transparent;
   position: relative;
-  border-radius: 7px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all .3s;
   transition: transform 0.3s, color 0.3s;
+  text-decoration: none;
 }
 
 .svgContainer {
@@ -112,11 +119,22 @@ video {
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 6rem;
-  font-size: 1.1em;
+  gap: 4rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.450);
-  margin-right: 11rem;
+  color: rgba(255, 255, 255, 0.72);
+  margin-right: 6rem;
+}
+
+.links a {
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.links a:hover,
+.links a:focus-visible {
+  color: #ffd166;
 }
 
 @media (max-width: 768px) {
@@ -138,7 +156,8 @@ li:hover {
 }
 
 .gallery {
-    height: 100vh;
+    min-height: 100vh;
+    padding-top: 7rem;
 }
 
 .heading {
@@ -154,7 +173,7 @@ li:hover {
 	background-clip: text;
 	text-shadow: 0 12px 30px rgba(0,0,0,0.6);
 	padding-bottom: 6rem;
-	transform: translateY(-2rem) scale(0.985);
+	transform: translateY(3rem) scale(0.96);
 	opacity: 0;
 	transition: transform 600ms cubic-bezier(.22,.98,.45,1), opacity 600ms ease, text-shadow 400ms ease;
 	will-change: transform, opacity, text-shadow;
@@ -166,28 +185,8 @@ li:hover {
 }
 
 .reveal-on-scroll.in-view {
-	transform: translateY(0);
+	transform: translateY(0) scale(1);
 	opacity: 1;
-}
-
-.heading::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: -2.4rem;
-	width: 56%;
-	height: 8px;
-	border-radius: 6px;
-	background: linear-gradient(90deg, #ffd166, #ff9a9e);
-	box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-	opacity: 0;
-	transition: opacity 420ms ease, bottom 420ms cubic-bezier(.22,.98,.45,1);
-}
-
-.reveal-on-scroll.in-view::after {
-	opacity: 1;
-	bottom: -2.8rem;
 }
 
 .a {
@@ -350,6 +349,7 @@ li:hover {
 	* {
 		box-sizing: border-box;
 	}
+
 	:root {
 		color-scheme: light dark;
 
